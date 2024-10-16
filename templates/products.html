@@ -4,6 +4,16 @@
 <section class="products-section">
     <h2>Our Products</h2>
 
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="flashes">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
     <ul class="tab-list">
         <li class="tab" data-tab="tab-cars">Cars</li>
         <li class="tab" data-tab="tab-aircrafts">Aircrafts</li>
@@ -24,7 +34,7 @@
                     <input type="hidden" name="price" value="150">
                     <input type="hidden" name="image" value="rc_offroad.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -38,7 +48,7 @@
                     <input type="hidden" name="price" value="170">
                     <input type="hidden" name="image" value="rc_racing.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -52,7 +62,7 @@
                     <input type="hidden" name="price" value="180">
                     <input type="hidden" name="image" value="rc_monster_truck.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -66,7 +76,7 @@
                     <input type="hidden" name="price" value="190">
                     <input type="hidden" name="image" value="rc_rock_crawler.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -80,7 +90,7 @@
                     <input type="hidden" name="price" value="160">
                     <input type="hidden" name="image" value="rc_drift.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -94,7 +104,7 @@
                     <input type="hidden" name="price" value="120">
                     <input type="hidden" name="image" value="rc_drift_truck.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -114,7 +124,7 @@
                     <input type="hidden" name="price" value="200">
                     <input type="hidden" name="image" value="quadcopter.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -128,7 +138,7 @@
                     <input type="hidden" name="price" value="250">
                     <input type="hidden" name="image" value="fixed_wing.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -142,7 +152,7 @@
                     <input type="hidden" name="price" value="220">
                     <input type="hidden" name="image" value="helicopter_drone.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -156,7 +166,7 @@
                     <input type="hidden" name="price" value="300">
                     <input type="hidden" name="image" value="two_engine_drone.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -170,7 +180,7 @@
                     <input type="hidden" name="price" value="90">
                     <input type="hidden" name="image" value="nano_drone.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <<input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -184,7 +194,7 @@
                     <input type="hidden" name="price" value="250">
                     <input type="hidden" name="image" value="hexacopter.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -198,7 +208,7 @@
                     <input type="hidden" name="price" value="320">
                     <input type="hidden" name="image" value="octocopter.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>            
@@ -218,7 +228,7 @@
                     <input type="hidden" name="price" value="180">
                     <input type="hidden" name="image" value="rc_speed_boat.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -232,7 +242,7 @@
                     <input type="hidden" name="price" value="230">
                     <input type="hidden" name="image" value="hovercraft.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -246,7 +256,7 @@
                     <input type="hidden" name="price" value="280">
                     <input type="hidden" name="image" value="asv.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -260,7 +270,7 @@
                     <input type="hidden" name="price" value="250">
                     <input type="hidden" name="image" value="rc_submarine.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -274,7 +284,7 @@
                     <input type="hidden" name="price" value="220">
                     <input type="hidden" name="image" value="rc_fishing_boat.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -288,7 +298,7 @@
                     <input type="hidden" name="price" value="200">
                     <input type="hidden" name="image" value="solar_powered_boat.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -308,7 +318,7 @@
                     <input type="hidden" name="price" value="100">
                     <input type="hidden" name="image" value="line_follower.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -322,7 +332,7 @@
                     <input type="hidden" name="price" value="140">
                     <input type="hidden" name="image" value="obstacle_avoidance.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -336,7 +346,7 @@
                     <input type="hidden" name="price" value="170">
                     <input type="hidden" name="image" value="self_balancing.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -350,7 +360,7 @@
                     <input type="hidden" name="price" value="220">
                     <input type="hidden" name="image" value="quadruped_robot.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -364,7 +374,7 @@
                     <input type="hidden" name="price" value="150">
                     <input type="hidden" name="image" value="sumo_robot.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
@@ -379,7 +389,7 @@
                     <input type="hidden" name="price" value="120">
                     <input type="hidden" name="image" value="self_balancing.jpg">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <input type="number" name="quantity" value="1" min="1" max="10" required>
                     <button type="submit" class="add-to-cart-btn">Add to Cart</button>
                 </form>
             </div>
