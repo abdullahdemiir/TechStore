@@ -40,7 +40,7 @@ cd techstore
 ```bash
 python -m venv venv
 source venv/bin/activate  # On macOS/Linux
-venv\Scriptsctivate  # On Windows
+venv\Scripts\activate  # On Windows
 ```
 
 ### 3. Install the dependencies
