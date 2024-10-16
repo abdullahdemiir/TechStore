@@ -3,6 +3,7 @@ import uuid
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
+email_regex = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
 
 @app.route('/')
 def home():
