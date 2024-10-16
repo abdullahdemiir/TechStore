@@ -52,7 +52,12 @@ def contact():
 def add_to_cart():
     product_name = request.form['product_name']
     price = float(request.form['price'])
-    quantity = int(request.form['quantity'])
+    quantity = request.form.get('quantity')
+    if not quantity or not quantity.isdigit() or int(quantity) < 1:
+        flash("Please enter a valid quantity (1 or more).")
+        return redirect(url_for('products'))
+
+    quantity = int(quantity)
     image = request.form.get('image', 'default.jpg')
 
     if 'cart' not in session:
