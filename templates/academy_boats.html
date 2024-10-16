@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="category-detail">
+        <h2>Boats Projects</h2>
+        <p>Explore a variety of RC boat projects, including speed boats, solar-powered boats, and underwater exploration vehicles. Each project offers detailed assembly instructions, required components, and exciting features.</p>
+
+        <div class="projects-grid">
+            <div class="project-box">
+                <h3>RC Speed Boats</h3>
+                <img src="{{ url_for('static', filename='images/rc_speed_boat.jpg') }}" alt="RC Speed Boats">
+                <p>RC speed boats are designed for high-speed races on water. Build your own speed boat to experience fast-paced, thrilling aquatic racing.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Waterproof brushless motor</li>
+                    <li>Electronic speed controller (ESC)</li>
+                    <li>Li-Po battery (11.1V or higher)</li>
+                    <li>Propeller and rudder system</li>
+                    <li>Waterproof hull (plastic or fiberglass)</li>
+                    <li>Water cooling system for motor</li>
+                    <li>2.4GHz remote control system</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>High-speed performance on water</li>
+                    <li>Sleek and aerodynamic design</li>
+                    <li>Great for competitive racing and fun water activities</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Solar-Powered Boats</h3>
+                <img src="{{ url_for('static', filename='images/solar_powered_boat.jpg') }}" alt="Solar-Powered Boats">
+                <p>Solar-powered boats use renewable energy to navigate the waters. Build your own eco-friendly boat that runs on solar panels and provides endless fun in the sun.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Solar panels for energy collection</li>
+                    <li>Brushless motor</li>
+                    <li>ESC for motor control</li>
+                    <li>Li-Po battery for energy storage</li>
+                    <li>Waterproof hull</li>
+                    <li>Propeller and rudder system</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Eco-friendly with renewable energy</li>
+                    <li>Extended run time with solar power</li>
+                    <li>Great for environmental awareness projects</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>RC Submarines</h3>
+                <img src="{{ url_for('static', filename='images/rc_submarine.jpg') }}" alt="RC Submarines">
+                <p>RC submarines allow you to explore underwater environments. Build your own submarine and dive into the depths of pools, lakes, or ponds.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Waterproof hull and pressure-resistant design</li>
+                    <li>Waterproof brushless motor</li>
+                    <li>Li-Po battery for long run times</li>
+                    <li>Propeller system with rudders</li>
+                    <li>Pressure and depth sensors</li>
+                    <li>Camera (optional) for underwater exploration</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Explore underwater environments</li>
+                    <li>Pressure-resistant hull for deep dives</li>
+                    <li>Optional camera for underwater footage</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Hovercraft</h3>
+                <img src="{{ url_for('static', filename='images/hovercraft.jpg') }}" alt="Hovercraft">
+                <p>Hovercrafts glide effortlessly over both water and land. Build a versatile hovercraft that can hover over surfaces with an air-cushion system.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Fan system for air cushion</li>
+                    <li>Brushless motor for propulsion</li>
+                    <li>Li-Po battery</li>
+                    <li>Durable hull for land and water use</li>
+                    <li>ESC for fan and motor control</li>
+                    <li>Steering rudders for directional control</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Capable of hovering over both water and land</li>
+                    <li>High-speed propulsion and smooth gliding</li>
+                    <li>Perfect for mixed-surface racing and stunts</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Autonomous Surface Vessel (ASV)</h3>
+                <img src="{{ url_for('static', filename='images/asv.jpg') }}" alt="Autonomous Surface Vessel">
+                <p>ASVs are used for scientific research, mapping, and surveillance. Build your own autonomous vessel with GPS navigation and sensor systems for smart surface exploration.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>GPS module for autonomous navigation</li>
+                    <li>Brushless motor for propulsion</li>
+                    <li>Li-Po battery for long run times</li>
+                    <li>ESC for motor control</li>
+                    <li>Waterproof hull</li>
+                    <li>Sensors for environmental data collection (e.g., water temperature, pH levels)</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Autonomous navigation with GPS</li>
+                    <li>Capable of environmental data collection</li>
+                    <li>Used in scientific research and mapping projects</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>RC Fishing Boats</h3>
+                <img src="{{ url_for('static', filename='images/rc_fishing_boat.jpg') }}" alt="RC Fishing Boats">
+                <p>RC fishing boats combine the thrill of remote control boating with fishing. Build a boat designed for carrying bait and releasing it to catch fish.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Waterproof hull</li>
+                    <li>Brushless motor</li>
+                    <li>Li-Po battery</li>
+                    <li>Fishing line release mechanism</li>
+                    <li>Propeller and rudder system</li>
+                    <li>ESC for motor control</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Remote-controlled bait release for fishing</li>
+                    <li>Waterproof design for smooth sailing</li>
+                    <li>Perfect for hobbyists who enjoy fishing</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

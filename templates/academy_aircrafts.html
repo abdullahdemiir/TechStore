@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="category-detail">
+        <h2>Aircraft Projects</h2>
+        <p>Explore various RC aircraft projects, from quadcopters to fixed-wing planes. Each project provides detailed information on components, assembly, and coding aspects.</p>
+
+        <div class="projects-grid">
+            <div class="project-box">
+                <h3>Quadcopters</h3>
+                <img src="{{ url_for('static', filename='images/quadcopter.jpg') }}" alt="Quadcopters">
+                <p>Quadcopters are versatile, stable flying machines used for aerial photography, racing, and hobby flying. With four motors and propellers, they provide great control and agility.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>4 brushless motors</li>
+                    <li>4 ESCs</li>
+                    <li>4 propellers</li>
+                    <li>Li-Po battery (11.1V or higher)</li>
+                    <li>Flight controller (Arduino, Pixhawk, or KK2)</li>
+                    <li>IMU sensors (gyro and accelerometer)</li>
+                    <li>Frame (carbon fiber or aluminum)</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Stable flight for beginners and experts</li>
+                    <li>Used for aerial photography and FPV racing</li>
+                    <li>Capable of autonomous flight with GPS module</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Hexacopters</h3>
+                <img src="{{ url_for('static', filename='images/hexacopter.jpg') }}" alt="Hexacopters">
+                <p>Hexacopters are six-motor drones designed for increased payload capacity and enhanced stability. Perfect for mapping, surveying, and lifting heavier cameras.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>6 brushless motors</li>
+                    <li>6 ESCs</li>
+                    <li>6 propellers</li>
+                    <li>Li-Po battery (14.8V or higher)</li>
+                    <li>Flight controller (Pixhawk or DJI Naza)</li>
+                    <li>IMU sensors</li>
+                    <li>GPS module for autonomous flight</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Increased stability with six motors</li>
+                    <li>Higher payload capacity</li>
+                    <li>Used for professional aerial photography, mapping, and surveying</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Octacopters</h3>
+                <img src="{{ url_for('static', filename='images/octacopter.jpg') }}" alt="Octacopters">
+                <p>Octacopters have eight motors, providing exceptional stability and power, making them ideal for carrying heavy loads like professional cameras and specialized sensors.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>8 brushless motors</li>
+                    <li>8 ESCs</li>
+                    <li>8 propellers</li>
+                    <li>Li-Po battery (22.2V or higher)</li>
+                    <li>Flight controller (Pixhawk or DJI Naza)</li>
+                    <li>IMU sensors</li>
+                    <li>GPS module for autonomous navigation</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Maximum stability and payload capacity</li>
+                    <li>Used in industrial applications like inspections and 3D mapping</li>
+                    <li>Redundancy in motor failure, ensuring safe flights</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Fixed-Wing Drones</h3>
+                <img src="{{ url_for('static', filename='images/fixed_wing.jpg') }}" alt="Fixed-Wing Drones">
+                <p>Fixed-wing drones are known for their long-range capabilities and energy efficiency. Ideal for mapping, aerial surveys, and reconnaissance missions.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>1 brushless motor</li>
+                    <li>Propeller</li>
+                    <li>Li-Po battery (14.8V or higher)</li>
+                    <li>Flight controller (Pixhawk)</li>
+                    <li>Servo motors</li>
+                    <li>GPS module</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Long-range and energy-efficient flight</li>
+                    <li>Ideal for mapping large areas</li>
+                    <li>Stable flight in wind and challenging conditions</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Nano Drones</h3>
+                <img src="{{ url_for('static', filename='images/nano_drone.jpg') }}" alt="Nano Drones">
+                <p>Nano drones are small, portable flying devices that are great for indoor flying and basic drone control learning. Perfect for beginners.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>4 micro brushless motors</li>
+                    <li>4 ESCs</li>
+                    <li>Small propellers</li>
+                    <li>Micro flight controller (Arduino Nano or STM32)</li>
+                    <li>Li-Po battery</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Compact size for indoor use</li>
+                    <li>Perfect for beginners</li>
+                    <li>Low-cost and easy to maintain</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Helicopter Drones</h3>
+                <img src="{{ url_for('static', filename='images/helicopter_drone.jpg') }}" alt="Helicopter Drones">
+                <p>Helicopter drones offer vertical take-off and landing capability with a traditional helicopter design. Ideal for precise hovering and navigation in tight spaces.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>1 main rotor motor</li>
+                    <li>1 tail rotor motor</li>
+                    <li>Li-Po battery (11.1V or higher)</li>
+                    <li>Flight controller (Pixhawk or Arduino)</li>
+                    <li>Gyroscope and accelerometer</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Precise control and stable hovering</li>
+                    <li>Vertical take-off and landing</li>
+                    <li>Great for indoor and outdoor use</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Two-Engine Fixed-Wing Drones</h3>
+                <img src="{{ url_for('static', filename='images/two_engine_drone.jpg') }}" alt="Two-Engine Fixed-Wing Drones">
+                <p>Two-engine fixed-wing drones offer greater power and stability, ideal for longer flights and heavier payloads. Suitable for advanced mapping and industrial applications.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>2 brushless motors</li>
+                    <li>2 propellers</li>
+                    <li>Li-Po battery (22.2V or higher)</li>
+                    <li>Flight controller (Pixhawk or similar)</li>
+                    <li>Servo motors</li>
+                    <li>GPS module</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Increased power with two motors</li>
+                    <li>Long-range and stable flight</li>
+                    <li>Great for advanced industrial applications</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock %}

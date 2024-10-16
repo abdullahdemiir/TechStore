@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="category-detail">
+        <h2>Educational Vehicles Projects</h2>
+        <p>Delve into educational projects that focus on robotics and automation. These vehicles help you learn about programming, sensors, and control systems. Perfect for STEM education and hobbyist projects.</p>
+
+        <div class="projects-grid">
+            <div class="project-box">
+                <h3>Line Follower Robot</h3>
+                <img src="{{ url_for('static', filename='images/line_follower.jpg') }}" alt="Line Follower Robot">
+                <p>The Line Follower Robot follows a designated path using sensors that detect lines on the ground. It’s a great project for beginners to learn about sensors and motor control.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Arduino or Raspberry Pi</li>
+                    <li>IR Sensors (for line detection)</li>
+                    <li>DC motors with wheels</li>
+                    <li>Motor driver (L298N or similar)</li>
+                    <li>Chassis (plastic or metal)</li>
+                    <li>Li-Po or AA battery pack</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Uses sensors to follow a line</li>
+                    <li>Teaches basic sensor integration and motor control</li>
+                    <li>Perfect for robotics competitions or educational purposes</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Self-Balancing Robot</h3>
+                <img src="{{ url_for('static', filename='images/self_balancing.jpg') }}" alt="Self-Balancing Robot">
+                <p>This robot stays upright using a combination of sensors and a control algorithm. A fun project for those interested in learning more about balancing systems and control theory.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Arduino or Raspberry Pi</li>
+                    <li>DC motors with encoders</li>
+                    <li>IMU (Gyroscope + Accelerometer)</li>
+                    <li>Li-Po battery</li>
+                    <li>Motor driver (L298N or similar)</li>
+                    <li>Chassis (compact and balanced design)</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Self-balancing technology using sensors</li>
+                    <li>PID control for stability</li>
+                    <li>Great for learning control systems and robotics</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Obstacle Avoidance Robot</h3>
+                <img src="{{ url_for('static', filename='images/obstacle_avoidance.jpg') }}" alt="Obstacle Avoidance Robot">
+                <p>This robot moves through an environment and avoids obstacles using ultrasonic sensors. It’s a great introduction to autonomous navigation and sensor integration.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Arduino or Raspberry Pi</li>
+                    <li>Ultrasonic sensors (HC-SR04)</li>
+                    <li>DC motors and motor driver</li>
+                    <li>Li-Po battery</li>
+                    <li>Chassis</li>
+                    <li>2.4GHz remote control system (optional)</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Autonomous navigation with obstacle detection</li>
+                    <li>Uses ultrasonic sensors for distance measurement</li>
+                    <li>Teaches basic robotics and automation concepts</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Balancing Robot</h3>
+                <img src="{{ url_for('static', filename='images/balancing_robot.jpg') }}" alt="Balancing Robot">
+                <p>The Balancing Robot is a two-wheeled vehicle that uses a gyroscope to maintain balance. This project is excellent for learning about control systems, sensors, and motor control.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Arduino or Raspberry Pi</li>
+                    <li>DC motors with encoders</li>
+                    <li>IMU (Gyroscope and Accelerometer)</li>
+                    <li>Motor driver (L298N or similar)</li>
+                    <li>Li-Po battery</li>
+                    <li>Compact chassis design</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Self-balancing using sensor data</li>
+                    <li>PID control algorithms for maintaining stability</li>
+                    <li>Perfect for learning control theory and robotics</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Quadruped Walking Robot</h3>
+                <img src="{{ url_for('static', filename='images/quadruped_robot.jpg') }}" alt="Quadruped Robot">
+                <p>This four-legged robot walks and maneuvers through obstacles. It’s an excellent project for those interested in advanced robotics and motion control systems.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Arduino or Raspberry Pi</li>
+                    <li>Servo motors (for leg movement)</li>
+                    <li>Li-Po battery</li>
+                    <li>Chassis with leg design</li>
+                    <li>Ultrasonic sensors for obstacle detection</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Simulates animal-like walking behavior</li>
+                    <li>Capable of navigating obstacles</li>
+                    <li>Teaches advanced robotics concepts</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>Sumo Robot</h3>
+                <img src="{{ url_for('static', filename='images/sumo_robot.jpg') }}" alt="Sumo Robot">
+                <p>Sumo robots compete in head-to-head battles, pushing opponents out of a ring. This fun project combines motor control, sensor integration, and strategic coding.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Arduino or Raspberry Pi</li>
+                    <li>Powerful DC motors</li>
+                    <li>Chassis with low center of gravity</li>
+                    <li>IR sensors for edge detection</li>
+                    <li>Li-Po battery</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Designed for competitive robot battles</li>
+                    <li>Uses sensors to stay inside the ring</li>
+                    <li>Teaches strategy and motor control</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="slideshow">
+        <div class="slide-container">
+            <div class="slide fade" style="background-image: url('{{ url_for('static', filename='images/slide1.jpg') }}');"></div>
+            <div class="slide fade" style="background-image: url('{{ url_for('static', filename='images/slide2.jpg') }}');"></div>
+            <div class="slide fade" style="background-image: url('{{ url_for('static', filename='images/slide3.jpg') }}');"></div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </section>
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/rc_racing.jpg') }}" alt="Best Seller Product">
+                <h3>Best Seller</h3>
+                <p>Our top-selling product, loved by enthusiasts worldwide!</p>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/fixed_wing.jpg') }}" alt="Most Popular Product">
+                <h3>Most Popular</h3>
+                <p>The product our customers can’t stop talking about!</p>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/rc_offroad.jpg') }}" alt="Top Rated Product">
+                <h3>Top Rated</h3>
+                <p>Rated the highest by our customers for quality and performance.</p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

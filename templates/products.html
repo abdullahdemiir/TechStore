@@ -1,0 +1,390 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="products-section">
+    <h2>Our Products</h2>
+
+    <ul class="tab-list">
+        <li class="tab" data-tab="tab-cars">Cars</li>
+        <li class="tab" data-tab="tab-aircrafts">Aircrafts</li>
+        <li class="tab" data-tab="tab-boats">Boats</li>
+        <li class="tab" data-tab="tab-educational-vehicles">Educational Vehicles</li>
+    </ul>
+
+    <div id="tab-cars" class="tab-content active">
+        <h3>Cars</h3>
+        <div class="product-grid">
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/rc_offroad.jpg') }}" alt="Off-Road RC Car">
+                <h4>Off-Road RC Car</h4>
+                <p>A powerful off-road RC car.</p>
+                <p>Price: $150</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Off-Road RC Car">
+                    <input type="hidden" name="price" value="150">
+                    <input type="hidden" name="image" value="rc_offroad.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/rc_racing.jpg') }}" alt="RC Racing Car">
+                <h4>RC Racing Car</h4>
+                <p>A high-speed car optimized for racing on smooth tracks.</p>
+                <p>Price: $170</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="RC Racing Car">
+                    <input type="hidden" name="price" value="170">
+                    <input type="hidden" name="image" value="rc_racing.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/rc_monster_truck.jpg') }}" alt="RC Monster Truck">
+                <h4>RC Monster Truck</h4>
+                <p>A powerful RC truck designed for rough terrains.</p>
+                <p>Price: $180</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="RC Monster Truck">
+                    <input type="hidden" name="price" value="180">
+                    <input type="hidden" name="image" value="rc_monster_truck.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/rc_rock_crawler.jpg') }}" alt="RC Rock Crawler">
+                <h4>RC Rock Crawler</h4>
+                <p>Designed for slow, precise climbing over rocks and tough terrains.</p>
+                <p>Price: $190</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="RC Rock Crawler">
+                    <input type="hidden" name="price" value="190">
+                    <input type="hidden" name="image" value="rc_rock_crawler.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/rc_drift.jpg') }}" alt="RC Drift Car">
+                <h4>RC Drift Car</h4>
+                <p>A car designed for mastering the art of controlled drifting.</p>
+                <p>Price: $160</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="RC Drift Car">
+                    <input type="hidden" name="price" value="160">
+                    <input type="hidden" name="image" value="rc_drift.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+           <div class="product-box">
+                <img src="{{ url_for('static', filename='images/rc_drift_truck.jpg') }}" alt="On-Road RC Car">
+                <h4>RC Drift Trucks<</h4>
+                <p>A fast on-road racing car.</p>
+                <p>Price: $120</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="On-Road RC Car">
+                    <input type="hidden" name="price" value="120">
+                    <input type="hidden" name="image" value="rc_drift_truck.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-aircrafts" class="tab-content">
+        <h3>Aircrafts</h3>
+        <div class="product-grid">
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/quadcopter.jpg') }}" alt="Quadcopter">
+                <h4>Quadcopter</h4>
+                <p>A multi-rotor drone.</p>
+                <p>Price: $200</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Quadcopter">
+                    <input type="hidden" name="price" value="200">
+                    <input type="hidden" name="image" value="quadcopter.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/fixed_wing.jpg') }}" alt="Fixed-Wing Drone">
+                <h4>Fixed-Wing Drone</h4>
+                <p>A drone known for its long-range capabilities and efficiency.</p>
+                <p>Price: $250</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Fixed-Wing Drone">
+                    <input type="hidden" name="price" value="250">
+                    <input type="hidden" name="image" value="fixed_wing.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/helicopter_drone.jpg') }}" alt="Helicopter Drone">
+                <h4>Helicopter Drone</h4>
+                <p>A drone with vertical take-off and landing capabilities.</p>
+                <p>Price: $220</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Helicopter Drone">
+                    <input type="hidden" name="price" value="220">
+                    <input type="hidden" name="image" value="helicopter_drone.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/two_engine_drone.jpg') }}" alt="Two-Engine Drone">
+                <h4>Two-Engine Drone</h4>
+                <p>A high-power drone ideal for long-range flights and carrying heavier payloads.</p>
+                <p>Price: $300</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Two-Engine Drone">
+                    <input type="hidden" name="price" value="300">
+                    <input type="hidden" name="image" value="two_engine_drone.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+             <div class="product-box">
+                <img src="{{ url_for('static', filename='images/nano_drone.jpg') }}" alt="Nano Drone">
+                <h4>Nano Drone</h4>
+                <p>A small, portable drone perfect for beginners.</p>
+                <p>Price: $90</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Nano Drone">
+                    <input type="hidden" name="price" value="90">
+                    <input type="hidden" name="image" value="nano_drone.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/hexacopter.jpg') }}" alt="Hexacopter">
+                <h4>Hexacopter</h4>
+                <p>A six-motor drone designed for aerial photography and mapping.</p>
+                <p>Price: $250</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Hexacopter">
+                    <input type="hidden" name="price" value="250">
+                    <input type="hidden" name="image" value="hexacopter.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/octocopter.jpg') }}" alt="Octocopter">
+                <h4>Octocopter</h4>
+                <p>A high-performance drone with eight rotors for stability and power.</p>
+                <p>Price: $320</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Octocopter">
+                    <input type="hidden" name="price" value="320">
+                    <input type="hidden" name="image" value="octocopter.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>            
+        </div>
+    </div>
+
+    <div id="tab-boats" class="tab-content">
+        <h3>Boats</h3>
+        <div class="product-grid">
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/rc_speed_boat.jpg') }}" alt="RC Speed Boat">
+                <h4>RC Speed Boat</h4>
+                <p>A fast RC boat.</p>
+                <p>Price: $180</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="RC Speed Boat">
+                    <input type="hidden" name="price" value="180">
+                    <input type="hidden" name="image" value="rc_speed_boat.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/hovercraft.jpg') }}" alt="Hovercraft">
+                <h4>Hovercraft</h4>
+                <p>A versatile hovercraft that glides over both water and land.</p>
+                <p>Price: $230</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Hovercraft">
+                    <input type="hidden" name="price" value="230">
+                    <input type="hidden" name="image" value="hovercraft.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/asv.jpg') }}" alt="Autonomous Surface Vessel (ASV)">
+                <h4>Autonomous Surface Vessel (ASV)</h4>
+                <p>An autonomous vessel designed for scientific research and environmental data collection.</p>
+                <p>Price: $280</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="ASV">
+                    <input type="hidden" name="price" value="280">
+                    <input type="hidden" name="image" value="asv.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+             <div class="product-box">
+                <img src="{{ url_for('static', filename='images/rc_submarine.jpg') }}" alt="RC Submarine">
+                <h4>RC Submarine</h4>
+                <p>A remote-controlled submarine for underwater exploration.</p>
+                <p>Price: $250</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="RC Submarine">
+                    <input type="hidden" name="price" value="250">
+                    <input type="hidden" name="image" value="rc_submarine.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/rc_fishing_boat.jpg') }}" alt="RC Fishing Boat">
+                <h4>RC Fishing Boat</h4>
+                <p>A remote-controlled boat designed for fishing enthusiasts.</p>
+                <p>Price: $220</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="RC Fishing Boat">
+                    <input type="hidden" name="price" value="220">
+                    <input type="hidden" name="image" value="rc_fishing_boat.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/solar_powered_boat.jpg') }}" alt="Solar-Powered Boat">
+                <h4>Solar-Powered Boat</h4>
+                <p>An eco-friendly boat powered by solar energy.</p>
+                <p>Price: $200</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Solar-Powered Boat">
+                    <input type="hidden" name="price" value="200">
+                    <input type="hidden" name="image" value="solar_powered_boat.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-educational-vehicles" class="tab-content">
+        <h3>Educational Vehicles</h3>
+        <div class="product-grid">
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/line_follower.jpg') }}" alt="Line Follower Robot">
+                <h4>Line Follower Robot</h4>
+                <p>A robot that follows lines.</p>
+                <p>Price: $100</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Line Follower Robot">
+                    <input type="hidden" name="price" value="100">
+                    <input type="hidden" name="image" value="line_follower.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/obstacle_avoidance.jpg') }}" alt="Obstacle Avoidance Robot">
+                <h4>Obstacle Avoidance Robot</h4>
+                <p>A robot that autonomously avoids obstacles using sensors.</p>
+                <p>Price: $140</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Obstacle Avoidance Robot">
+                    <input type="hidden" name="price" value="140">
+                    <input type="hidden" name="image" value="obstacle_avoidance.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/self_balancing.jpg') }}" alt="Self-Balancing Robot">
+                <h4>Self-Balancing Robot</h4>
+                <p>A robot that uses sensors and control algorithms to maintain balance.</p>
+                <p>Price: $170</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Self-Balancing Robot">
+                    <input type="hidden" name="price" value="170">
+                    <input type="hidden" name="image" value="self_balancing.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+             <div class="product-box">
+                <img src="{{ url_for('static', filename='images/quadruped_robot.jpg') }}" alt="Quadruped Robot">
+                <h4>Quadruped Robot</h4>
+                <p>A four-legged robot designed for advanced robotics learning and obstacle navigation.</p>
+                <p>Price: $220</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Quadruped Robot">
+                    <input type="hidden" name="price" value="220">
+                    <input type="hidden" name="image" value="quadruped_robot.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/sumo_robot.jpg') }}" alt="Sumo Robot">
+                <h4>Sumo Robot</h4>
+                <p>A robot built for sumo wrestling competitions, pushing opponents out of the ring.</p>
+                <p>Price: $150</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Sumo Robot">
+                    <input type="hidden" name="price" value="150">
+                    <input type="hidden" name="image" value="sumo_robot.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+            
+            <div class="product-box">
+                <img src="{{ url_for('static', filename='images/self_balancing.jpg') }}" alt="Self-Balancing Robot">
+                <h4>Self-Balancing Robot</h4>
+                <p>A robot that balances on two wheels using sensors.</p>
+                <p>Price: $120</p>
+                <form action="{{ url_for('add_to_cart') }}" method="POST">
+                    <input type="hidden" name="product_name" value="Self-Balancing Robot">
+                    <input type="hidden" name="price" value="120">
+                    <input type="hidden" name="image" value="self_balancing.jpg">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" value="1" min="1" max="10">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

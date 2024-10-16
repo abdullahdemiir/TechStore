@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>If you have any requests, complaints, or product return inquiries, please fill out the form below and we'll get back to you as soon as possible.</p>
+
+        <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject" required>
+                <option value="request">Request</option>
+                <option value="complaint">Complaint</option>
+                <option value="return">Product Return</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+{% endblock %}

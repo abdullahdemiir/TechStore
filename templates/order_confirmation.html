@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="order-confirmation">
+        <h2>Thank You for Your Order, {{ name }}!</h2>
+        <p>Your order number is: <strong>{{ order_number }}</strong></p>
+        <p>We have received your order and will process it soon.</p>
+        
+        <h3>Shipping Details:</h3>
+        <p>{{ shipping_address }}</p>
+
+        <h3>Total Amount:</h3>
+        <p><strong>${{ total_amount }}</strong></p>
+
+        <p>If you have any questions, feel free to <a href="{{ url_for('contact') }}">contact us</a>.</p>
+    </section>
+{% endblock %}

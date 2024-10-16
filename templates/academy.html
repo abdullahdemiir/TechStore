@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="academy-section">
+        <h2>Welcome to the Academy</h2>
+        <div class="academy-grid">
+            <div class="category-box">
+                <h3>Cars</h3>
+                <img src="{{ url_for('static', filename='images/rc_offroad.jpg') }}" alt="Cars">
+                <p>Learn more about building RC cars and other automotive hobby projects.</p>
+                <a href="{{ url_for('academy_cars') }}" class="read-more-btn">Read More</a>
+            </div>
+            <div class="category-box">
+                <h3>Educational Vehicles</h3>
+                <img src="{{ url_for('static', filename='images/line_follower.jpg') }}" alt="Educational Vehicles">
+                <p>Explore robotics and other educational vehicle projects.</p>
+                <a href="{{ url_for('academy_educational_vehicles') }}" class="read-more-btn">Read More</a>
+            </div>
+            <div class="category-box">
+                <h3>Boats</h3>
+                <img src="{{ url_for('static', filename='images/rc_speed_boat.jpg') }}" alt="Boats">
+                <p>Dive into the world of RC boats and aquatic hobby projects.</p>
+                <a href="{{ url_for('academy_boats') }}" class="read-more-btn">Read More</a>
+            </div>
+            <div class="category-box">
+                <h3>Aircrafts</h3>
+                <img src="{{ url_for('static', filename='images/quadcopter.jpg') }}" alt="Aircrafts">
+                <p>Discover how to build and fly RC planes, drones, and more.</p>
+                <a href="{{ url_for('academy_aircrafts') }}" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

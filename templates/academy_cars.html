@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="category-detail">
+        <h2>Cars Projects</h2>
+        <p>Discover various RC car projects, including off-road vehicles, drift cars, and racing cars. Each project provides detailed assembly instructions and required components.</p>
+
+        <div class="projects-grid">
+            <div class="project-box">
+                <h3>RC Off-Road Cars</h3>
+                <img src="{{ url_for('static', filename='images/rc_offroad.jpg') }}" alt="RC Off-Road Cars">
+                <p>Build robust and powerful off-road RC cars designed to tackle rough terrains, dirt trails, and rocky paths with ease.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Durable chassis (aluminum or carbon fiber)</li>
+                    <li>Independent suspension system</li>
+                    <li>Brushed or brushless motor</li>
+                    <li>Electronic speed controller (ESC)</li>
+                    <li>High-grip, deep-tread tires</li>
+                    <li>Li-Po battery (7.4V or higher)</li>
+                    <li>2.4GHz remote control system</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Designed for off-road racing and tough terrains</li>
+                    <li>High suspension and durable body</li>
+                    <li>Capable of fast speeds and rugged performance</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>RC Racing Cars</h3>
+                <img src="{{ url_for('static', filename='images/rc_racing.jpg') }}" alt="RC Racing Cars">
+                <p>RC racing cars are built for speed and precision on smooth tracks. Learn how to construct racing vehicles optimized for high velocity and tight turns.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Aerodynamic chassis (carbon fiber or plastic)</li>
+                    <li>Brushless motor for maximum speed</li>
+                    <li>Slick, low-profile tires for grip on paved surfaces</li>
+                    <li>ESC for motor control</li>
+                    <li>Li-Po battery (11.1V or higher)</li>
+                    <li>Advanced steering and control mechanisms</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>High-speed racing optimized for smooth surfaces</li>
+                    <li>Aerodynamic design for low air resistance</li>
+                    <li>Responsive steering for tight cornering</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>RC Drift Cars</h3>
+                <img src="{{ url_for('static', filename='images/rc_drift.jpg') }}" alt="RC Drift Cars">
+                <p>Master the art of controlled drifting with RC drift cars. Build your own drift vehicle and practice sliding through corners with precision.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Lightweight chassis (plastic or aluminum)</li>
+                    <li>High-speed brushless motor</li>
+                    <li>Slick, hard compound tires for drifting</li>
+                    <li>ESC with customizable settings for drift control</li>
+                    <li>Li-Po battery</li>
+                    <li>Steering system optimized for sharp turns</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Specifically designed for drifting on smooth surfaces</li>
+                    <li>Low suspension for better stability while drifting</li>
+                    <li>Perfect for mastering high-speed, controlled slides</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>RC Monster Trucks</h3>
+                <img src="{{ url_for('static', filename='images/rc_monster_truck.jpg') }}" alt="RC Monster Trucks">
+                <p>Build powerful and massive RC monster trucks capable of dominating rough terrains with oversized tires and high-torque motors.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Large, durable chassis</li>
+                    <li>High-torque brushless motor</li>
+                    <li>Oversized, heavy-duty tires</li>
+                    <li>Suspension system with long travel shocks</li>
+                    <li>ESC for motor control</li>
+                    <li>Li-Po battery (14.8V or higher)</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>High-ground clearance and oversized tires for rough terrains</li>
+                    <li>Powerful torque to tackle obstacles and perform stunts</li>
+                    <li>Durable design for extreme off-road conditions</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>RC Rock Crawlers</h3>
+                <img src="{{ url_for('static', filename='images/rc_rock_crawler.jpg') }}" alt="RC Rock Crawlers">
+                <p>RC rock crawlers are designed for slow, precise climbing over rocks and rough terrains. Build your own crawler and experience technical driving challenges.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Heavy-duty chassis for rugged environments</li>
+                    <li>High-torque motor optimized for slow, controlled movement</li>
+                    <li>Large, soft compound tires with deep treads</li>
+                    <li>Li-Po battery</li>
+                    <li>ESC with adjustable power settings</li>
+                    <li>Suspension system with maximum articulation</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Precision climbing over rocks and obstacles</li>
+                    <li>High-torque motor for controlled slow speeds</li>
+                    <li>Suspension system for extreme flexibility and articulation</li>
+                </ul>
+            </div>
+            <div class="project-box">
+                <h3>RC Drift Trucks</h3>
+                <img src="{{ url_for('static', filename='images/rc_drift_truck.jpg') }}" alt="RC Drift Trucks">
+                <p>Drift trucks offer the thrill of drifting with the rugged look of a truck. Customize your drift truck for sleek slides and cool stunts on paved surfaces.</p>
+                <p><strong>Required Components:</strong></p>
+                <ul>
+                    <li>Sturdy truck-style chassis</li>
+                    <li>Brushless motor for high speeds</li>
+                    <li>Slick tires for controlled drifting</li>
+                    <li>Li-Po battery (11.1V or higher)</li>
+                    <li>Advanced steering system</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Combines the art of drifting with the design of a truck</li>
+                    <li>Stable, controlled slides on smooth surfaces</li>
+                    <li>Durable and stylish truck body</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

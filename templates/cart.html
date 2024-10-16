@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="cart-section">
+        <h2>Your Cart</h2>
+        
+        {% if cart %}
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Image</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>
+                        <img src="{{ url_for('static', filename='images/' + item.image) }}" alt="{{ item.name }}" class="cart-img">
+                    </td>
+                    <td>{{ item.quantity }}</td>
+                    <td>${{ item.price }}</td>
+                    <td>${{ item.total_price }}</td>
+                    <td>
+                        <form action="{{ url_for('remove_from_cart') }}" method="POST">
+                            <input type="hidden" name="product_name" value="{{ item.name }}">
+                            <button type="submit" class="remove-btn">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <p><strong>Subtotal:</strong> ${{ total }}</p>
+            <button class="checkout-btn" onclick="window.location.href='{{ url_for('checkout') }}'">Proceed to Checkout</button>
+        </div>
+        {% else %}
+        <div class="empty-cart">
+            <img src="{{ url_for('static', filename='images/empty_cart.jpg') }}" alt="Empty Cart">
+            <p>Your cart is currently empty.</p>
+            <a href="{{ url_for('products') }}" class="continue-shopping-btn">Continue Shopping</a>
+        </div>
+        {% endif %}
+    </section>
+{% endblock %}
